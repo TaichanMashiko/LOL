@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOL ランク帯別 チェックリスト (超詳細版)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 25px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #005a82; /* LOLっぽい青色 */
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 15px;
+        }
+        h2 {
+            background-color: #e9ecef;
+            color: #003c56;
+            padding: 12px 15px;
+            border-left: 6px solid #005a82;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        h3 {
+            color: #005a82;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #ced4da;
+            padding-bottom: 8px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        /* 大項目のスタイル */
+        .rank-section > ul > li {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            background-color: #fff;
+            transition: box-shadow 0.2s ease;
+        }
+         .rank-section > ul > li:hover {
+            box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+         }
+        .main-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px; /* 大項目と小項目の間のスペース */
+        }
+        .main-item input[type="checkbox"] {
+            margin-right: 12px;
+            margin-top: 5px;
+            flex-shrink: 0;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        .main-item label {
+            font-weight: bold; /* 太字 */
+            color: #212529;
+            cursor: pointer;
+            flex-grow: 1;
+        }
+
+        /* 小項目のスタイル */
+        li ul {
+            list-style: none;
+            padding-left: 35px; /* インデント */
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        li ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+        li ul li:hover {
+             background-color: #f1f3f5;
+        }
+        li ul input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 4px;
+            flex-shrink: 0;
+            cursor: pointer;
+            transform: scale(1.0); /* 標準サイズ */
+        }
+        li ul li label {
+            font-weight: normal; /* 細字 */
+            color: #555;
+            cursor: pointer;
+            flex-grow: 1;
+            line-height: 1.5;
+        }
+
+        /* ランクごとのアクセントカラー */
+        .iron h2 { border-left-color: #51484a; }
+        .bronze h2 { border-left-color: #8c523a; }
+        .silver h2 { border-left-color: #80989d; }
+        .gold h2 { border-left-color: #cd8837; }
+        .platinum h2 { border-left-color: #4e9996; }
+        .diamond h2 { border-left-color: #576bce; }
+        p em { color: #6c757d; font-size: 0.9em;}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>LOL ランク帯別 チェックリスト (超詳細版)</h1>
+
+    <div class="rank-section iron">
+        <h2>◆ アイアン (Iron) チェックリスト</h2>
+
+        <h3>操作/ミクロ:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_micro_1_main">
+                    <label for="iron_micro_1_main">キャラクターを思った場所に移動させられたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_micro_1_sub1"><label for="iron_micro_1_sub1">クリックした地点へスムーズに移動できたか？</label></li>
+                    <li><input type="checkbox" id="iron_micro_1_sub2"><label for="iron_micro_1_sub2">壁に引っかかったり、意図しない動きをあまりしなかったか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_micro_2_main">
+                    <label for="iron_micro_2_main">使いたいスキルを意図したタイミングで使えたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_micro_2_sub1"><label for="iron_micro_2_sub1">QWERキーを押してスキルを発動できたか？</label></li>
+                    <li><input type="checkbox" id="iron_micro_2_sub2"><label for="iron_micro_2_sub2">狙った方向や対象にスキルを発動できたか？（当たるかどうかは別として）</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_micro_3_main">
+                    <label for="iron_micro_3_main">ミニオンにとどめを刺そうと意識したか？ (CS)</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_micro_3_sub1"><label for="iron_micro_3_sub1">ミニオンの体力が残りわずかになった時に注目できたか？</label></li>
+                    <li><input type="checkbox" id="iron_micro_3_sub2"><label for="iron_micro_3_sub2">通常攻撃やスキルで最後の攻撃を与えようと試みたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_micro_4_main">
+                    <label for="iron_micro_4_main">敵タワーから攻撃されないように下がれたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_micro_4_sub1"><label for="iron_micro_4_sub1">敵タワーの攻撃範囲を示す円を認識できたか？</label></li>
+                    <li><input type="checkbox" id="iron_micro_4_sub2"><label for="iron_micro_4_sub2">範囲内に入ったら、範囲外に移動できたか？</label></li>
+                    <li><input type="checkbox" id="iron_micro_4_sub3"><label for="iron_micro_4_sub3">タワーに攻撃され続ける状況を避けられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_micro_5_main">
+                    <label for="iron_micro_5_main">体力が少なくなったら、安全な場所まで下がれたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_micro_5_sub1"><label for="iron_micro_5_sub1">自分の体力バーが赤くなったことに気づけたか？</label></li>
+                    <li><input type="checkbox" id="iron_micro_5_sub2"><label for="iron_micro_5_sub2">敵チャンピオンやミニオン、タワーから離れられたか？</label></li>
+                    <li><input type="checkbox" id="iron_micro_5_sub3"><label for="iron_micro_5_sub3">自陣タワー下など安全な場所へ移動できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_micro_6_main">
+                    <label for="iron_micro_6_main">Bキーで拠点に戻って回復や買い物ができたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_micro_6_sub1"><label for="iron_micro_6_sub1">体力やマナが減ったり、ゴールドが貯まったりした時に拠点に戻ることを考えられたか？</label></li>
+                    <li><input type="checkbox" id="iron_micro_6_sub2"><label for="iron_micro_6_sub2">安全な場所でBキーを押してリコールを開始できたか？</label></li>
+                    <li><input type="checkbox" id="iron_micro_6_sub3"><label for="iron_micro_6_sub3">拠点に戻って体力回復やアイテム購入を行えたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>ゲーム知識:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_knowledge_1_main">
+                    <label for="iron_knowledge_1_main">自分が使ったチャンピオンのスキルが、それぞれどんな効果か大体わかったか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_knowledge_1_sub1"><label for="iron_knowledge_1_sub1">Q, W, E, Rの各スキルのおおまかな役割（攻撃、防御、移動、強力な技など）をプレイ中に認識できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_knowledge_2_main">
+                    <label for="iron_knowledge_2_main">ショップでアイテムを購入できたか？ (推奨アイテムでもOK)</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_knowledge_2_sub1"><label for="iron_knowledge_2_sub1">拠点に戻った際、Pキーなどでショップを開けたか？</label></li>
+                    <li><input type="checkbox" id="iron_knowledge_2_sub2"><label for="iron_knowledge_2_sub2">「推奨」タブなどからゴールドを使ってアイテムを購入できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_knowledge_3_main">
+                    <label for="iron_knowledge_3_main">ミニオンについていけば、敵の建物に向かうことがわかったか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_knowledge_3_sub1"><label for="iron_knowledge_3_sub1">ミニオンが自動でレーンを進むことを理解していたか？</label></li>
+                    <li><input type="checkbox" id="iron_knowledge_3_sub2"><label for="iron_knowledge_3_sub2">ミニオンが敵のミニオンやタワーを攻撃していく流れを理解していたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_knowledge_4_main">
+                    <label for="iron_knowledge_4_main">試合の勝ち負けが、ネクサスの破壊で決まることを理解していたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_knowledge_4_sub1"><label for="iron_knowledge_4_sub1">最終的にマップの奥にある敵の「ネクサス」を壊せば勝ちだと理解していたか？</label></li>
+                    <li><input type="checkbox" id="iron_knowledge_4_sub2"><label for="iron_knowledge_4_sub2">自陣の「ネクサス」が壊されれば負けだと理解していたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>マクロ/戦略:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_macro_1_main">
+                    <label for="iron_macro_1_main">試合開始後、自分の担当レーンに向かえたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_macro_1_sub1"><label for="iron_macro_1_sub1">ゲーム開始時に割り当てられたレーン（トップ、ミッド、ボット、ジャングル）へ向かったか？</label></li>
+                    <li><input type="checkbox" id="iron_macro_1_sub2"><label for="iron_macro_1_sub2">迷わずに担当レーンへ移動できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_macro_2_main">
+                    <label for="iron_macro_2_main">ミニマップの存在に気づいていたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_macro_2_sub1"><label for="iron_macro_2_sub1">画面の隅にある小さなマップ（ミニマップ）がそこにあることを認識していたか？（見る余裕があったかは問わない）</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>メンタル/コミュニケーション:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_mental_1_main">
+                    <label for="iron_mental_1_main">ゲームを楽しめたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_mental_1_sub1"><label for="iron_mental_1_sub1">勝敗に関わらず、プレイ自体に面白さを感じられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="iron_mental_2_main">
+                    <label for="iron_mental_2_main">味方や敵に暴言を吐かなかったか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="iron_mental_2_sub1"><label for="iron_mental_2_sub1">チャットなどで、他人を不快にさせるような言葉を使わなかったか？</label></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="rank-section bronze">
+        <h2>◆ ブロンズ (Bronze) チェックリスト</h2>
+        <p><em>(アイアンの項目はクリアしている前提)</em></p>
+
+        <h3>操作/ミクロ:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_micro_1_main">
+                    <label for="bronze_micro_1_main">CSを取るために、ラストヒットを狙って通常攻撃やスキルを使ったか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_micro_1_sub1"><label for="bronze_micro_1_sub1">ミニオンのHPをよく見て、自分の攻撃で倒せるタイミングを狙ったか？</label></li>
+                    <li><input type="checkbox" id="bronze_micro_1_sub2"><label for="bronze_micro_1_sub2">ラストヒットのために通常攻撃やスキルを使うという具体的な行動を試みたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_micro_2_main">
+                    <label for="bronze_micro_2_main">自分のチャンピオンの簡単なスキルコンボを試せたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_micro_2_sub1"><label for="bronze_micro_2_sub1">スキル説明などを参考に、特定の順番でスキルを使うことを意識したか？ (例: Qの後にE)</label></li>
+                    <li><input type="checkbox" id="bronze_micro_2_sub2"><label for="bronze_micro_2_sub2">実際にそのコンボを試すことができたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_micro_3_main">
+                    <label for="bronze_micro_3_main">敵タワー下で無理な攻撃をしなかったか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_micro_3_sub1"><label for="bronze_micro_3_sub1">敵チャンピオンがいる時に敵タワー下に入るリスクを認識していたか？</label></li>
+                    <li><input type="checkbox" id="bronze_micro_3_sub2"><label for="bronze_micro_3_sub2">タワーから集中攻撃を受けて倒されるような状況を避けられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_micro_4_main">
+                    <label for="bronze_micro_4_main">敵の分かりやすいスキル（例: ブランコのQ、ラックスのQ）を避けようと動いたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_micro_4_sub1"><label for="bronze_micro_4_sub1">敵がスキルを使うモーションや弾道が見えたか？</label></li>
+                    <li><input type="checkbox" id="bronze_micro_4_sub2"><label for="bronze_micro_4_sub2">キャラクターを移動させて避けようと試みたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>ゲーム知識:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_knowledge_1_main">
+                    <label for="bronze_knowledge_1_main">対面した敵チャンピオンの「これだけは避けたい」スキルを認識していたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_knowledge_1_sub1"><label for="bronze_knowledge_1_sub1">ブリッツのフックやモルガナのQなど、当たると危険な特定のスキルを知っていたか？</label></li>
+                    <li><input type="checkbox" id="bronze_knowledge_1_sub2"><label for="bronze_knowledge_1_sub2">それらのスキルを警戒して立ち回ろうと意識したか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_knowledge_2_main">
+                    <label for="bronze_knowledge_2_main">ドラゴンやヘラルドが出現する場所と、倒すと有利になることを知っていたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_knowledge_2_sub1"><label for="bronze_knowledge_2_sub1">マップの特定の場所に時間経過で現れることを知っていたか？</label></li>
+                    <li><input type="checkbox" id="bronze_knowledge_2_sub2"><label for="bronze_knowledge_2_sub2">倒すとチーム全体に良い効果があることを理解していたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_knowledge_3_main">
+                    <label for="bronze_knowledge_3_main">フラッシュやイグナイトなどのサモナースペルの効果を理解し、使えたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_knowledge_3_sub1"><label for="bronze_knowledge_3_sub1">DやFキーのスペル（フラッシュ、イグナイトなど）の効果を知っていたか？</label></li>
+                    <li><input type="checkbox" id="bronze_knowledge_3_sub2"><label for="bronze_knowledge_3_sub2">適切な場面（逃げる、追う、とどめ）で使おうと試みたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_knowledge_4_main">
+                    <label for="bronze_knowledge_4_main">なぜそのアイテムを買うのか、少しでも考えようとしたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_knowledge_4_sub1"><label for="bronze_knowledge_4_sub1">推奨アイテムを選ぶだけでなく、アイテムの効果（攻撃力UPなど）を意識したか？</label></li>
+                    <li><input type="checkbox" id="bronze_knowledge_4_sub2"><label for="bronze_knowledge_4_sub2">状況（例: 敵の魔法攻撃が痛い）とアイテムの効果（魔法防御UP）を結びつけて考えようとしたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>マクロ/戦略:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_macro_1_main">
+                    <label for="bronze_macro_1_main">試合中、時々ミニマップを見て、敵が映っているか確認したか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_macro_1_sub1"><label for="bronze_macro_1_sub1">レーン戦の合間などに、数秒でもミニマップに目をやったか？</label></li>
+                    <li><input type="checkbox" id="bronze_macro_1_sub2"><label for="bronze_macro_1_sub2">近くに敵チャンピオンのアイコンが表示されていないか確認しようとしたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_macro_2_main">
+                    <label for="bronze_macro_2_main">トリンケット（無料ワード）を使ったか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_macro_2_sub1"><label for="bronze_macro_2_sub1">最初から持っている無料のワードアイテム（数字キー4など）を使用できたか？</label></li>
+                    <li><input type="checkbox" id="bronze_macro_2_sub2"><label for="bronze_macro_2_sub2">茂みの中など視界が欲しい場所に設置してみたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_macro_3_main">
+                    <label for="bronze_macro_3_main">草むら（ブッシュ）には注意すべきだと意識できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_macro_3_sub1"><label for="bronze_macro_3_sub1">視界がない茂みの中に敵が隠れている可能性を考えられたか？</label></li>
+                    <li><input type="checkbox" id="bronze_macro_3_sub2"><label for="bronze_macro_3_sub2">不用意に茂みに顔を出さないように意識できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_macro_4_main">
+                    <label for="bronze_macro_4_main">味方が近くで戦っていたら、助けに行こうとしたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_macro_4_sub1"><label for="bronze_macro_4_sub1">ミニマップや画面内で、近くの味方が敵と戦い始めたことに気づけたか？</label></li>
+                    <li><input type="checkbox" id="bronze_macro_4_sub2"><label for="bronze_macro_4_sub2">自分もそちらへ向かって戦闘に参加しようと試みたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>メンタル/コミュニケーション:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_mental_1_main">
+                    <label for="bronze_mental_1_main">負けた試合でも、すぐに諦めず最後までプレイしたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_mental_1_sub1"><label for="bronze_mental_1_sub1">不利な状況になっても、プレイを放棄しなかったか？</label></li>
+                    <li><input type="checkbox" id="bronze_mental_1_sub2"><label for="bronze_mental_1_sub2">ネクサスが破壊されるまでプレイを続けようとしたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="bronze_mental_2_main">
+                    <label for="bronze_mental_2_main">「危険」「向かっている」などの簡単なピンを使ってみたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="bronze_mental_2_sub1"><label for="bronze_mental_2_sub1">GキーやVキー長押しでピンメニューを開けたか？</label></li>
+                    <li><input type="checkbox" id="bronze_mental_2_sub2"><label for="bronze_mental_2_sub2">「危険（！）」や「向かっている（旗）」などのピンを使って、味方に簡単な情報を伝えようとしたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="rank-section silver">
+        <h2>◆ シルバー (Silver) チェックリスト</h2>
+        <p><em>(ブロンズまでの項目はクリアしている前提)</em></p>
+
+        <h3>操作/ミクロ:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_micro_1_main">
+                    <label for="silver_micro_1_main">10分経過時点で、目標のCS数（例: 50CS）を意識してプレイしたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_micro_1_sub1"><label for="silver_micro_1_sub1">試合時間を意識してプレイできたか？</label></li>
+                    <li><input type="checkbox" id="silver_micro_1_sub2"><label for="silver_micro_1_sub2">「1分あたり〇〇CS」のような目標を持って、より多くのラストヒットを取ることを目指したか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_micro_2_main">
+                    <label for="silver_micro_2_main">CSを取りながら、相手チャンピオンにスキルや通常攻撃で攻撃（ハラス）をしようとしたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_micro_2_sub1"><label for="silver_micro_2_sub1">相手がCSを取ろうとしている隙を狙えたか？</label></li>
+                    <li><input type="checkbox" id="silver_micro_2_sub2"><label for="silver_micro_2_sub2">自分のスキルが使えるタイミングで、敵チャンピオンにも攻撃を当てて体力を削ろうとしたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_micro_3_main">
+                    <label for="silver_micro_3_main">集団戦で、前に出すぎず/下がりすぎず、自分の役割（ダメージ役なら後方など）を意識した位置取りができたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_micro_3_sub1"><label for="silver_micro_3_sub1">自分が使うチャンピオンの特性（タンク/ADCなど）を考えたか？</label></li>
+                    <li><input type="checkbox" id="silver_micro_3_sub2"><label for="silver_micro_3_sub2">集団戦中に適切な距離感を保とうと意識できたか？</label></li>
+                    <li><input type="checkbox" id="silver_micro_3_sub3"><label for="silver_micro_3_sub3">前に出すぎてすぐに倒されたり、後ろに下がりすぎて何もできなかったりする状況を避けられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_micro_4_main">
+                    <label for="silver_micro_4_main">敵のスキルを見てから避ける動きを試みたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_micro_4_sub1"><label for="silver_micro_4_sub1">敵のスキルエフェクト（光や弾道）が見えたか？</label></li>
+                    <li><input type="checkbox" id="silver_micro_4_sub2"><label for="silver_micro_4_sub2">それが自分に当たる前に移動キーやスキル（ブリンクなど）を使って回避しようと試みたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>ゲーム知識:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_knowledge_1_main">
+                    <label for="silver_knowledge_1_main">自分のロール（役割）が、試合全体で何をすべきか（例: サポートなら視界確保や味方の保護）を意識していたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_knowledge_1_sub1"><label for="silver_knowledge_1_sub1">選んだロール（トップ/JG/ミッド/ADC/サポ）の試合全体での役割を理解していたか？</label></li>
+                    <li><input type="checkbox" id="silver_knowledge_1_sub2"><label for="silver_knowledge_1_sub2">その役割に沿った行動（例: ADCならダメージ、サポなら補助）をしようとしたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_knowledge_2_main">
+                    <label for="silver_knowledge_2_main">コントロールワードを購入し、設置したか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_knowledge_2_sub1"><label for="silver_knowledge_2_sub1">ショップで75ゴールドのコントロールワードを購入したか？</label></li>
+                    <li><input type="checkbox" id="silver_knowledge_2_sub2"><label for="silver_knowledge_2_sub2">重要な茂み（川、バフ周辺など）に置いて視界を確保/敵ワード無効化を試みたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_knowledge_3_main">
+                    <label for="silver_knowledge_3_main">各ドラゴン（炎、山、海、風、ヘクス、ケミ）の効果の違いを理解していたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_knowledge_3_sub1"><label for="silver_knowledge_3_sub1">それぞれのドラゴンを倒した時のバフ（攻撃力UP、防御力UPなど）の違いを知っていたか？</label></li>
+                    <li><input type="checkbox" id="silver_knowledge_3_sub2"><label for="silver_knowledge_3_sub2">どのドラゴンが今の状況で特に欲しいかを考えられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_knowledge_4_main">
+                    <label for="silver_knowledge_4_main">自分の使うチャンピオンに合ったルーンを選べているか（推奨でもOKだが理由を考えたか）？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_knowledge_4_sub1"><label for="silver_knowledge_4_sub1">試合前にルーンを選択したか？</label></li>
+                    <li><input type="checkbox" id="silver_knowledge_4_sub2"><label for="silver_knowledge_4_sub2">なぜそのキーストーンやサブルーンが自分のチャンピオンに適しているのか、少しでも理由を考えて選択できたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>マクロ/戦略:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_macro_1_main">
+                    <label for="silver_macro_1_main">定期的に（例: 5～10秒に1回）ミニマップを確認する癖がついていたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_macro_1_sub1"><label for="silver_macro_1_sub1">CSを取る合間、移動中などに、意識的にミニマップを見たか？</label></li>
+                    <li><input type="checkbox" id="silver_macro_1_sub2"><label for="silver_macro_1_sub2">短い間隔で見て、敵の位置、味方の動き、ミニオン状況などを把握しようと努めたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_macro_2_main">
+                    <label for="silver_macro_2_main">味方のジャングラーがガンクに来たら、それに合わせて行動できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_macro_2_sub1"><label for="silver_macro_2_sub1">味方ジャングラーの接近（ピンや視認）に気づけたか？</label></li>
+                    <li><input type="checkbox" id="silver_macro_2_sub2"><label for="silver_macro_2_sub2">CCスキルを使ったり、前に出て攻撃したりして、ガンクに合わせる動きができたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_macro_3_main">
+                    <label for="silver_macro_3_main">ドラゴンやヘラルドが湧く時間を確認し、その前にリコールや準備をしようと考えたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_macro_3_sub1"><label for="silver_macro_3_sub1">TABキーなどでオブジェクトの出現タイマーを確認したか？</label></li>
+                    <li><input type="checkbox" id="silver_macro_3_sub2"><label for="silver_macro_3_sub2">出現1分前くらいに拠点に戻って準備（買い物、回復）をすることを意識できたか？</label></li>
+                    <li><input type="checkbox" id="silver_macro_3_sub3"><label for="silver_macro_3_sub3">準備後、オブジェクト付近に向かうことを意識できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_macro_4_main">
+                    <label for="silver_macro_4_main">ミニオンのウェーブを敵タワーまで押し付けてからリコールしようとしたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_macro_4_sub1"><label for="silver_macro_4_sub1">リコールする前に、自分のレーンのミニオンを敵タワーまで進ませようと試みたか？</label></li>
+                    <li><input type="checkbox" id="silver_macro_4_sub2"><label for="silver_macro_4_sub2">リコール中に損失（タワーダメージ、経験値、ゴールド）を抑えることを意識できたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>メンタル/コミュニケーション:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_mental_1_main">
+                    <label for="silver_mental_1_main">試合後、自分のプレイの反省点（ミスや改善点）を一つでも考えられたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_mental_1_sub1"><label for="silver_mental_1_sub1">勝敗に関わらず、試合後に自分のプレイを振り返ろうとしたか？</label></li>
+                    <li><input type="checkbox" id="silver_mental_1_sub2"><label for="silver_mental_1_sub2">「あの場面で死ななければ」「もっとCSが取れたはず」など、具体的な改善点を見つけようとしたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="silver_mental_2_main">
+                    <label for="silver_mental_2_main">「？（行方不明）」「！（注意）」ピンを状況に応じて使えたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="silver_mental_2_sub1"><label for="silver_mental_2_sub1">対面の敵がレーンからいなくなったら「？」ピンを使ったか？</label></li>
+                    <li><input type="checkbox" id="silver_mental_2_sub2"><label for="silver_mental_2_sub2">味方に危険を知らせたい時に「！」ピンを使ったか？</label></li>
+                    <li><input type="checkbox" id="silver_mental_2_sub3"><label for="silver_mental_2_sub3">適切な場所や対象に対してピンを使えたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="rank-section gold">
+        <h2>◆ ゴールド (Gold) チェックリスト</h2>
+        <p><em>(シルバーまでの項目はクリアしている前提)</em></p>
+
+        <h3>操作/ミクロ:</h3>
+         <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_micro_1_main">
+                    <label for="gold_micro_1_main">CS精度を高く保てたか？（例: 10分70CS以上）</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_micro_1_sub1"><label for="gold_micro_1_sub1">相手からのハラスを受けながらでも、安定してCSを取れたか？</label></li>
+                    <li><input type="checkbox" id="gold_micro_1_sub2"><label for="gold_micro_1_sub2">相手にハラスをしながらでも、安定してCSを取れたか？</label></li>
+                    <li><input type="checkbox" id="gold_micro_1_sub3"><label for="gold_micro_1_sub3">目標CS数を意識し、達成に近づけたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_micro_2_main">
+                    <label for="gold_micro_2_main">有利なダメージ交換を仕掛けられたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_micro_2_sub1"><label for="gold_micro_2_sub1">相手の主要スキルがクールダウン中のタイミングを狙えたか？</label></li>
+                    <li><input type="checkbox" id="gold_micro_2_sub2"><label for="gold_micro_2_sub2">相手がCSを取る無防備な瞬間を狙えたか？</label></li>
+                    <li><input type="checkbox" id="gold_micro_2_sub3"><label for="gold_micro_2_sub3">自分の方がレベルやアイテムで有利なタイミングを活かせたか？</label></li>
+                    <li><input type="checkbox" id="gold_micro_2_sub4"><label for="gold_micro_2_sub4">積極的にダメージ交換を仕掛け、HP有利を作れたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_micro_3_main">
+                    <label for="gold_micro_3_main">相手の主要スキルを使わせたり避けたりして、そのクールダウン中に有利な行動を取れたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_micro_3_sub1"><label for="gold_micro_3_sub1">相手の重要なスキル（CCやUltなど）を空振りさせたり、回避したりできたか？</label></li>
+                    <li><input type="checkbox" id="gold_micro_3_sub2"><label for="gold_micro_3_sub2">そのスキルが使えない時間帯を認識できたか？</label></li>
+                    <li><input type="checkbox" id="gold_micro_3_sub3"><label for="gold_micro_3_sub3">その時間帯を活かして、強気に攻めたり、有利な状況を作ったりできたか？ (攻撃、CS獲得、ガンク呼び込みなど)</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_micro_4_main">
+                    <label for="gold_micro_4_main">集団戦で、優先して倒すべき敵（ダメージを出している柔らかい敵など）を判断し、攻撃できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_micro_4_sub1"><label for="gold_micro_4_sub1">集団戦が始まった時に、敵の中で誰が最も脅威かを判断できたか？ (例: 育ったADC、強力なUltを持つメイジ)</label></li>
+                    <li><input type="checkbox" id="gold_micro_4_sub2"><label for="gold_micro_4_sub2">その敵を優先的に攻撃しようと試みたか？</label></li>
+                    <li><input type="checkbox" id="gold_micro_4_sub3"><label for="gold_micro_4_sub3">味方と協力してフォーカスを合わせようと意識できたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>ゲーム知識:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_knowledge_1_main">
+                    <label for="gold_knowledge_1_main">対面のチャンピオンのスキル構成や、強くなる時間帯（パワースパイク）を意識して立ち回れたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_knowledge_1_sub1"><label for="gold_knowledge_1_sub1">相手チャンピオンがどのレベル/アイテムで強くなるかを理解していたか？</label></li>
+                    <li><input type="checkbox" id="gold_knowledge_1_sub2"><label for="gold_knowledge_1_sub2">相手が弱い時間帯は強気に、強い時間帯は慎重に、といった立ち回りの変化を意識できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_knowledge_2_main">
+                    <label for="gold_knowledge_2_main">敵チームの構成を見て、適切な防御アイテム（物理防御/魔法防御）を選択できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_knowledge_2_sub1"><label for="gold_knowledge_2_sub1">敵チームのダメージタイプ（物理/魔法）の偏りを確認できたか？</label></li>
+                    <li><input type="checkbox" id="gold_knowledge_2_sub2"><label for="gold_knowledge_2_sub2">物理ダメージが多いなら物理防御アイテム、魔法ダメージが多いなら魔法防御アイテムを、試合の状況に合わせて購入できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_knowledge_3_main">
+                    <label for="gold_knowledge_3_main">敵や味方のサモナースペル（特にフラッシュ）が使われたか、クールダウン中かを把握しようとしたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_knowledge_3_sub1"><label for="gold_knowledge_3_sub1">戦闘中やその後に、誰がどのサモナースペルを使ったか確認しようとしたか？</label></li>
+                    <li><input type="checkbox" id="gold_knowledge_3_sub2"><label for="gold_knowledge_3_sub2">チャットに記録したり、記憶したりして、次の判断材料にしようとしたか？</label></li>
+                    <li><input type="checkbox" id="gold_knowledge_3_sub3"><label for="gold_knowledge_3_sub3">クールダウンタイマー（例: フラッシュは約5分）を考慮に入れようとしたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_knowledge_4_main">
+                    <label for="gold_knowledge_4_main">ジャングルのモンスター（赤バフ、青バフ）の効果や、大体の出現時間を把握していたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_knowledge_4_sub1"><label for="gold_knowledge_4_sub1">赤バフ（スロー/継続ダメ）と青バフ（マナ回復/スキルヘイスト）の効果を理解していたか？</label></li>
+                    <li><input type="checkbox" id="gold_knowledge_4_sub2"><label for="gold_knowledge_4_sub2">それらが約5分ごとに出現することを把握していたか？</label></li>
+                    <li><input type="checkbox" id="gold_knowledge_4_sub3"><label for="gold_knowledge_4_sub3">バフの取得を狙ったり、敵に取らせないように警戒したりできたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>マクロ/戦略:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_macro_1_main">
+                    <label for="gold_macro_1_main">意図的にミニオンウェーブを押したり（プッシュ）、自陣タワー近くで止めたり（フリーズ）するウェーブコントロールを試みたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_macro_1_sub1"><label for="gold_macro_1_sub1">ロームしたい時やタワーを攻撃したい時にウェーブをプッシュしようとしたか？</label></li>
+                    <li><input type="checkbox" id="gold_macro_1_sub2"><label for="gold_macro_1_sub2">相手にガンクのリスクを与えたい時や安全にファームしたい時にウェーブをフリーズしようとしたか？</label></li>
+                    <li><input type="checkbox" id="gold_macro_1_sub3"><label for="gold_macro_1_sub3">状況に応じてミニオンウェーブの位置を操作しようという意識があったか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_macro_2_main">
+                    <label for="gold_macro_2_main">他のレーンへ助けに行く（ローム）適切なタイミング（例: ウェーブを押し付けた後）を見極めようとしたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_macro_2_sub1"><label for="gold_macro_2_sub1">自分のレーンのミニオンを処理し、損失が少ないタイミングを選べたか？</label></li>
+                    <li><input type="checkbox" id="gold_macro_2_sub2"><label for="gold_macro_2_sub2">有利を作れそうな場所や助けが必要な味方のレーンへ移動することを考えられたか？</label></li>
+                    <li><input type="checkbox" id="gold_macro_2_sub3"><label for="gold_macro_2_sub3">ロームによってキルやアシストを狙えたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_macro_3_main">
+                    <label for="gold_macro_3_main">ドラゴンやバロンの前に、敵がいそうな場所にワードを置いたり、コントロールワードで視界を確保したりできたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_macro_3_sub1"><label for="gold_macro_3_sub1">重要なオブジェクトでの戦闘が予想される場面を認識できたか？</label></li>
+                    <li><input type="checkbox" id="gold_macro_3_sub2"><label for="gold_macro_3_sub2">事前にオブジェクト周辺の茂みや通路にワードを設置しようとしたか？</label></li>
+                    <li><input type="checkbox" id="gold_macro_3_sub3"><label for="gold_macro_3_sub3">コントロールワードを使って視界を確保したり、敵の視界を奪ったりしようとしたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_macro_4_main">
+                    <label for="gold_macro_4_main">チームの構成（集団戦が得意、少数戦が得意など）を少し意識してプレイできたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_macro_4_sub1"><label for="gold_macro_4_sub1">自分たちのチーム構成の強み（集団戦、スカーミッシュ、ピックアップなど）を考えられたか？</label></li>
+                    <li><input type="checkbox" id="gold_macro_4_sub2"><label for="gold_macro_4_sub2">その強みに合った戦い方をしようと意識できたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>メンタル/コミュニケーション:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_mental_1_main">
+                    <label for="gold_mental_1_main">味方に対して、具体的な行動提案（例: 「ドラゴン取ろう」「タワーを折ろう」）をピンやチャットで行えたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_mental_1_sub1"><label for="gold_mental_1_sub1">漠然とした指示ではなく、具体的な目標（ドラゴン、タワーなど）を示す提案を試みたか？</label></li>
+                    <li><input type="checkbox" id="gold_mental_1_sub2"><label for="gold_mental_1_sub2">適切なタイミングで味方に提案を伝えられたか？</label></li>
+                    <li><input type="checkbox" id="gold_mental_1_sub3"><label for="gold_mental_1_sub3">ピンと簡潔なチャットを組み合わせて伝えられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_mental_2_main">
+                    <label for="gold_mental_2_main">自分の明らかなミスを認め、次に活かそうと考えられたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_mental_2_sub1"><label for="gold_mental_2_sub1">ミスをした時に、感情的にならずに自分の判断や行動を振り返れたか？</label></li>
+                    <li><input type="checkbox" id="gold_mental_2_sub2"><label for="gold_mental_2_sub2">「次はこうしよう」と具体的な改善策を考えられたか？</label></li>
+                    <li><input type="checkbox" id="gold_mental_2_sub3"><label for="gold_mental_2_sub3">ミスを引きずらず、次のプレイに意識を向けられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="gold_mental_3_main">
+                    <label for="gold_mental_3_main">味方のミスに対して感情的にならず、プレイを続けられたか？ (Tilt管理)</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="gold_mental_3_sub1"><label for="gold_mental_3_sub1">味方がミスをした時に、チャットで責めなかったか？</label></li>
+                    <li><input type="checkbox" id="gold_mental_3_sub2"><label for="gold_mental_3_sub2">イライラして自分のプレイが雑にならなかったか？</label></li>
+                    <li><input type="checkbox" id="gold_mental_3_sub3"><label for="gold_mental_3_sub3">自分のプレイに集中し、冷静さを保とうと努められたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="rank-section platinum">
+        <h2>◆ プラチナ (Platinum) チェックリスト</h2>
+        <p><em>(ゴールドまでの項目はクリアしている前提)</em></p>
+
+        <h3>操作/ミクロ:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_micro_1_main">
+                    <label for="plat_micro_1_main">レーン戦で相手にプレッシャーを与え、CSで有利を作れたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_micro_1_sub1"><label for="plat_micro_1_sub1">スキルや通常攻撃によるハラス、有利な位置取りで相手を圧迫できたか？</label></li>
+                    <li><input type="checkbox" id="plat_micro_1_sub2"><label for="plat_micro_1_sub2">相手をタワー下に押し込めたり、CSを取りづらくさせたりできたか？</label></li>
+                    <li><input type="checkbox" id="plat_micro_1_sub3"><label for="plat_micro_1_sub3">結果的にCS数で差をつけられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_micro_2_main">
+                    <label for="plat_micro_2_main">有利な状況で、相手をキルまで持っていく、あるいはリコールさせることができたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_micro_2_sub1"><label for="plat_micro_2_sub1">HP有利を作った後や、相手の重要スキルがないタイミングを見極められたか？</label></li>
+                    <li><input type="checkbox" id="plat_micro_2_sub2"><label for="plat_micro_2_sub2">オールイン（全力攻撃）を仕掛けてキルを狙えたか？</label></li>
+                    <li><input type="checkbox" id="plat_micro_2_sub3"><label for="plat_micro_2_sub3">相手を危険な状態にしてリコールさせ、有利を拡大できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_micro_3_main">
+                    <label for="plat_micro_3_main">フラッシュを使ったスキルコンボや、相手のフラッシュを予測した動きなど、応用的なプレイができたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_micro_3_sub1"><label for="plat_micro_3_sub1">フラッシュを使って相手の意表を突くスキルコンボを実行できたか？</label></li>
+                    <li><input type="checkbox" id="plat_micro_3_sub2"><label for="plat_micro_3_sub2">相手がフラッシュで逃げる先を読んでスキルを置くなどの予測プレイを試みたか？</label></li>
+                    <li><input type="checkbox" id="plat_micro_3_sub3"><label for="plat_micro_3_sub3">一歩進んだ操作や読みを取り入れたプレイができたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_micro_4_main">
+                    <label for="plat_micro_4_main">集団戦で、自分の役割（ダメージ、味方保護、敵の妨害など）に応じた適切な立ち回りができたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_micro_4_sub1"><label for="plat_micro_4_sub1">自分のチャンピオンと役割（エンゲージ、ピール、キャリーなど）を理解していたか？</label></li>
+                    <li><input type="checkbox" id="plat_micro_4_sub2"><label for="plat_micro_4_sub2">集団戦中にその役割を最大限遂行するための位置取りができたか？</label></li>
+                    <li><input type="checkbox" id="plat_micro_4_sub3"><label for="plat_micro_4_sub3">役割に応じた適切なスキル使用ができたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>ゲーム知識:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_knowledge_1_main">
+                    <label for="plat_knowledge_1_main">特定のチャンピオン同士のマッチアップについて、有利不利や立ち回りのポイントを理解していたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_knowledge_1_sub1"><label for="plat_knowledge_1_sub1">自分のチャンピオンと対面の組み合わせにおける有利不利を理解していたか？</label></li>
+                    <li><input type="checkbox" id="plat_knowledge_1_sub2"><label for="plat_knowledge_1_sub2">どのレベル帯でパワースパイクが来るか、どのようなトレードを狙うべきかを知っていたか？</label></li>
+                    <li><input type="checkbox" id="plat_knowledge_1_sub3"><label for="plat_knowledge_1_sub3">その知識に基づいてレーン戦を行えたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_knowledge_2_main">
+                    <label for="plat_knowledge_2_main">相手の特定のチャンピオンへの対策となるアイテム（重傷アイテム、特定の防御アイテムなど）を適切に購入できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_knowledge_2_sub1"><label for="plat_knowledge_2_sub1">敵に回復能力が高いチャンピオンがいれば重傷アイテムを購入できたか？</label></li>
+                    <li><input type="checkbox" id="plat_knowledge_2_sub2"><label for="plat_knowledge_2_sub2">特定の脅威となる敵（育ったアサシンなど）に対して有効な防御アイテム（ゾーニャ、GAなど）を購入できたか？</label></li>
+                    <li><input type="checkbox" id="plat_knowledge_2_sub3"><label for="plat_knowledge_2_sub3">適切なタイミングでカウンターアイテムを選択・購入できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_knowledge_3_main">
+                    <label for="plat_knowledge_3_main">敵のアイテムビルドを見て、脅威度を判断したり、自分の次のアイテム選択に反映させたりできたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_knowledge_3_sub1"><label for="plat_knowledge_3_sub1">TABキーで敵の持ち物（アイテム、レベル）を頻繁に確認できたか？</label></li>
+                    <li><input type="checkbox" id="plat_knowledge_3_sub2"><label for="plat_knowledge_3_sub2">敵のアイテムビルドから、その敵の脅威度（ダメージ量、耐久力など）を判断できたか？</label></li>
+                    <li><input type="checkbox" id="plat_knowledge_3_sub3"><label for="plat_knowledge_3_sub3">敵のビルドに合わせて、自分の次のアイテム選択（防御アイテム、攻撃アイテムなど）を調整できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_knowledge_4_main">
+                    <label for="plat_knowledge_4_main">敵ジャングラーの動き（どこを周回しているか、次にどこを狙うか）をミニマップや状況から予測しようとしたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_knowledge_4_sub1"><label for="plat_knowledge_4_sub1">敵ジャングラーのスタート位置やガンク履歴、ワード情報などを考慮できたか？</label></li>
+                    <li><input type="checkbox" id="plat_knowledge_4_sub2"><label for="plat_knowledge_4_sub2">次に敵ジャングラーが現れそうな場所やタイミングを予測しようと試みたか？</label></li>
+                    <li><input type="checkbox" id="plat_knowledge_4_sub3"><label for="plat_knowledge_4_sub3">その予測に基づいて、警戒（ワード設置、下がる）やカウンター（カウンターガンク準備）の準備ができたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>マクロ/戦略:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_macro_1_main">
+                    <label for="plat_macro_1_main">スロープッシュ（ミニオンをゆっくり溜めて進ませる）など、より高度なウェーブコントロールを状況に応じて使えたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_macro_1_sub1"><label for="plat_macro_1_sub1">次のオブジェクトに合わせてサイドレーンにスロープッシュを作り、相手に対応を強いる動きができたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_1_sub2"><label for="plat_macro_1_sub2">タワーダイブの準備のために、タワー下に大きなミニオンウェーブを送り込むセットアップができたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_1_sub3"><label for="plat_macro_1_sub3">状況に応じて、プッシュ、フリーズ、スロープッシュなどのウェーブ操作を戦略的に使い分けられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_macro_2_main">
+                    <label for="plat_macro_2_main">敵のワードを破壊（デワード）したり、敵の視界外から行動したりして、視界の有利を作れたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_macro_2_sub1"><label for="plat_macro_2_sub1">コントロールワードやスイープレンズ（赤トリ）を使って敵のワードを発見・破壊できたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_2_sub2"><label for="plat_macro_2_sub2">ガンクルートやオブジェクト周りの視界を確保・支配できたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_2_sub3"><label for="plat_macro_2_sub3">敵のワードがないであろうルートを通って奇襲を仕掛けたり、有利な行動を取ったりできたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_macro_3_main">
+                    <label for="plat_macro_3_main">スプリットプッシュ（単独でのレーン押し）を行うべきか、チームと合流すべきかの判断が適切にできたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_macro_3_sub1"><label for="plat_macro_3_sub1">自分がスプリットに適したチャンピオンか、テレポートを持っているかなどを考慮できたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_3_sub2"><label for="plat_macro_3_sub2">1対1で勝てるか、敵の対応人数を予測できたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_3_sub3"><label for="plat_macro_3_sub3">味方が他の場所でプレッシャーをかけられるか、オブジェクトを取れる状況かなどを考慮できたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_3_sub4"><label for="plat_macro_3_sub4">これらの要素から、スプリットを続けるべきか、集団戦に合流すべきかを正しく判断できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_macro_4_main">
+                    <label for="plat_macro_4_main">試合全体を通して、いつ、どこで、何をすべきかというゲームプランを意識してプレイできたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_macro_4_sub1"><label for="plat_macro_4_sub1">序盤、中盤、終盤の各フェーズで、自分の役割やチームの目標を意識できたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_4_sub2"><label for="plat_macro_4_sub2">試合の時間帯やチーム構成に応じた大まかなゲームの流れ（勝ち筋）を考えられたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_4_sub3"><label for="plat_macro_4_sub3">そのゲームプランに沿った行動を取ろうと努めたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_macro_5_main">
+                    <label for="plat_macro_5_main">テレポートを、戦闘参加やオブジェクト確保のために効果的に使えたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_macro_5_sub1"><label for="plat_macro_5_sub1">他のレーンでの戦闘にテレポートで駆けつけ、数的有利を作れたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_5_sub2"><label for="plat_macro_5_sub2">重要なオブジェクト（ドラゴン、バロン）の確保のためにテレポートを使用できたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_5_sub3"><label for="plat_macro_5_sub3">スプリットプッシュ中のプレッシャーとしてテレポートを保持・活用できたか？</label></li>
+                    <li><input type="checkbox" id="plat_macro_5_sub4"><label for="plat_macro_5_sub4">戦略的な目的を持ってテレポートを使用・温存できたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>メンタル/コミュニケーション:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_mental_1_main">
+                    <label for="plat_mental_1_main">チーム全体の状況を見て、必要な指示（例: 「バロン警戒」「下がって」）を明確に伝えられたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_mental_1_sub1"><label for="plat_mental_1_sub1">自分のレーンだけでなく、マップ全体の状況（敵の位置、オブジェクト、味方の状況）を把握できたか？</label></li>
+                    <li><input type="checkbox" id="plat_mental_1_sub2"><label for="plat_mental_1_sub2">チーム全体に関わる具体的な指示（警戒、撤退、集合など）を判断できたか？</label></li>
+                    <li><input type="checkbox" id="plat_mental_1_sub3"><label for="plat_mental_1_sub3">ピンや簡潔なチャットで、その指示を明確に伝えられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="plat_mental_2_main">
+                    <label for="plat_mental_2_main">不利な状況でも冷静さを保ち、逆転のチャンスを探し続けられたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="plat_mental_2_sub1"><label for="plat_mental_2_sub1">キル数やゴールド差で負けていても、感情的にならなかったか？</label></li>
+                    <li><input type="checkbox" id="plat_mental_2_sub2"><label for="plat_mental_2_sub2">逆転につながる可能性のある行動（相手のミスを誘う、有利な少数戦、オブジェクトスティールなど）を冷静に探せたか？</label></li>
+                    <li><input type="checkbox" id="plat_mental_2_sub3"><label for="plat_mental_2_sub3">諦めずに、それらのチャンスを実行しようと試みたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+     <div class="rank-section diamond">
+        <h2>◆ ダイヤモンド (Diamond) チェックリスト</h2>
+        <p><em>(プラチナまでの項目はクリアしている前提)</em></p>
+
+        <h3>操作/ミクロ:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_micro_1_main">
+                    <label for="dia_micro_1_main">ほぼミスなくCSを取り続け、レーンで相手を圧倒できた（または不利な状況を耐え抜いた）か？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_micro_1_sub1"><label for="dia_micro_1_sub1">どんな状況でも高いCS精度を維持できたか？</label></li>
+                    <li><input type="checkbox" id="dia_micro_1_sub2"><label for="dia_micro_1_sub2">有利なマッチアップでは相手を完封するレベルで差をつけられたか？</label></li>
+                    <li><input type="checkbox" id="dia_micro_1_sub3"><label for="dia_micro_1_sub3">不利なマッチアップでもCS差を最小限に抑え、キルを与えずにレーン戦を終えられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_micro_2_main">
+                    <label for="dia_micro_2_main">相手の行動や心理を読み、フェイントやベイト（おびき寄せ）などの駆け引きを行えたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_micro_2_sub1"><label for="dia_micro_2_sub1">スキルを使うと見せかけてキャンセルするなどのフェイントを行えたか？</label></li>
+                    <li><input type="checkbox" id="dia_micro_2_sub2"><label for="dia_micro_2_sub2">わざと隙を見せて相手のスキルを誘い出す（ベイト）動きができたか？</label></li>
+                    <li><input type="checkbox" id="dia_micro_2_sub3"><label for="dia_micro_2_sub3">味方のジャングラーがいることを隠して油断させるなど、相手の思考の裏をかく駆け引きを行えたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_micro_3_main">
+                    <label for="dia_micro_3_main">非常に短い時間での判断が求められる場面で、最適な操作（スキル回避、フラッシュ反応など）を行えたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_micro_3_sub1"><label for="dia_micro_3_sub1">相手のフラッシュからの即時CCスキルに対して即座に反応（フラッシュ回避など）できたか？</label></li>
+                    <li><input type="checkbox" id="dia_micro_3_sub2"><label for="dia_micro_3_sub2">複数のスキルが飛び交う集団戦で重要なスキルを的確に回避できたか？</label></li>
+                    <li><input type="checkbox" id="dia_micro_3_sub3"><label for="dia_micro_3_sub3">反射神経と判断力が求められる場面で最適な操作を行えたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_micro_4_main">
+                    <label for="dia_micro_4_main">集団戦で、最大限のダメージ効率または貢献度（生存、ピール、エンゲージなど）を発揮できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_micro_4_sub1"><label for="dia_micro_4_sub1">自分の役割に応じて、集団戦の結果を左右するような高いパフォーマンスを発揮できたか？ (例: キャリーを素早く倒す、味方を守り切る、最適なエンゲージ)</label></li>
+                    <li><input type="checkbox" id="dia_micro_4_sub2"><label for="dia_micro_4_sub2">高い生存能力を保ちつつ、ダメージ効率を最大化できたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>ゲーム知識:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_knowledge_1_main">
+                    <label for="dia_knowledge_1_main">敵味方のチーム構成から、この試合の勝利条件（Win Condition）は何かを理解し、それを達成するための行動が取れたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_knowledge_1_sub1"><label for="dia_knowledge_1_sub1">試合開始時点で、自分たちのチームの勝ち筋（例: レイトゲーム、ボット集中、スプリット）を理解できたか？</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_1_sub2"><label for="dia_knowledge_1_sub2">その勝ち筋を実現するための戦略的な行動を一貫して取れたか？</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_1_sub3"><label for="dia_knowledge_1_sub3">相手の勝ち筋を理解し、それを妨害する動きも考慮できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_knowledge_2_main">
+                    <label for="dia_knowledge_2_main">現在のメタ（流行）を理解し、ピック/バンやビルド選択に反映できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_knowledge_2_sub1"><label for="dia_knowledge_2_sub1">現在プロシーンや高レートで流行しているチャンピオン、戦術、アイテムを把握していたか？</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_2_sub2"><label for="dia_knowledge_2_sub2">その知識をチャンピオン選択（ピック/バン）に活かせたか？</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_2_sub3"><label for="dia_knowledge_2_sub3">アイテム購入や戦略立案においてメタを考慮できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_knowledge_3_main">
+                    <label for="dia_knowledge_3_main">相手や味方の構成に応じて、ルーンやサモナースペルの選択を微調整できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_knowledge_3_sub1"><label for="dia_knowledge_3_sub1">マッチアップやチーム構成全体を見て、ルーンの一部を普段と変える判断ができたか？ (例: サブルーンを防御的に)</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_3_sub2"><label for="dia_knowledge_3_sub2">サモナースペル（テレポート/イグナイトなど）を、試合展開を予測して最適化して選択できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_knowledge_4_main">
+                    <label for="dia_knowledge_4_main">敵ジャングラーの動きや意図を高い精度で予測し、カウンターアクション（カウンタージャングル、カウンターガンク）を取れたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_knowledge_4_sub1"><label for="dia_knowledge_4_sub1">限られた情報から、敵ジャングラーの次の行動（どのキャンプ、どこへガンク）を高確率で予測できたか？</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_4_sub2"><label for="dia_knowledge_4_sub2">敵のジャングルに入ってモンスターを奪う（カウンタージャングル）行動ができたか？</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_4_sub3"><label for="dia_knowledge_4_sub3">敵のガンクを待ち伏せして返り討ちにする（カウンターガンク）行動ができたか？</label></li>
+                </ul>
+            </li>
+             <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_knowledge_5_main">
+                    <label for="dia_knowledge_5_main">レベルが先行することの重要性を理解し、経験値差を意識した立ち回りができたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_knowledge_5_sub1"><label for="dia_knowledge_5_sub1">レベル差が戦闘結果に大きく影響することを理解していたか？</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_5_sub2"><label for="dia_knowledge_5_sub2">ミニオンウェーブの経験値を確実に獲得できたか？</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_5_sub3"><label for="dia_knowledge_5_sub3">有利なトレードで相手をレーンから追い出し、経験値差をつける動きができたか？</label></li>
+                    <li><input type="checkbox" id="dia_knowledge_5_sub4"><label for="dia_knowledge_5_sub4">レベル先行したタイミング（特にレベル2, 3, 6）で有利なアクション（仕掛ける、ゾーニング）を取れたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>マクロ/戦略:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_macro_1_main">
+                    <label for="dia_macro_1_main">ゲーム全体の流れ（テンポ）を意識し、有利を拡大する/不利を覆すための戦略的な動き（オブジェクト交換、タワーダイブなど）を実行できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_macro_1_sub1"><label for="dia_macro_1_sub1">試合の主導権（テンポ）を握ることを意識できたか？</label></li>
+                    <li><input type="checkbox" id="dia_macro_1_sub2"><label for="dia_macro_1_sub2">有利な状況で連続してオブジェクト確保やタワーダイブを行い、スノーボールできたか？</label></li>
+                    <li><input type="checkbox" id="dia_macro_1_sub3"><label for="dia_macro_1_sub3">不利な状況でも、相手の行動に対してオブジェクト交換（例: ドラゴンを渡してタワーを取る）などのカウンタープレイを行えたか？</label></li>
+                    <li><input type="checkbox" id="dia_macro_1_sub4"><label for="dia_macro_1_sub4">ゲームの流れをコントロールする動きを判断・実行できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_macro_2_main">
+                    <label for="dia_macro_2_main">視界情報を最大限に活用し、敵の狙いを予測して先回りしたり、敵の意表を突く動き（ブラフ、罠）ができたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_macro_2_sub1"><label for="dia_macro_2_sub1">ワードから得られる断片的な情報をつなぎ合わせて、敵の全体的な動きや狙いを推測できたか？</label></li>
+                    <li><input type="checkbox" id="dia_macro_2_sub2"><label for="dia_macro_2_sub2">その推測に基づいて、待ち伏せしたり、オブジェクトを先に確保したりする先回り行動ができたか？</label></li>
+                    <li><input type="checkbox" id="dia_macro_2_sub3"><label for="dia_macro_2_sub3">わざとワードに映ることで敵を誘い出す（ブラフ）などの情報戦・心理戦を仕掛けられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_macro_3_main">
+                    <label for="dia_macro_3_main">チーム構成に基づいた最適な集団戦の起こし方、あるいは集団戦を避ける動きを選択できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_macro_3_sub1"><label for="dia_macro_3_sub1">自分たちの構成が集団戦に強いか弱いかを判断できたか？</label></li>
+                    <li><input type="checkbox" id="dia_macro_3_sub2"><label for="dia_macro_3_sub2">強い場合は、有利な地形（狭い通路など）やタイミングで戦いを仕掛けられたか？</label></li>
+                    <li><input type="checkbox" id="dia_macro_3_sub3"><label for="dia_macro_3_sub3">弱い場合は、スプリットプッシュや少数戦で相手を揺さぶり、集団戦を極力避ける動きを選択・実行できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_macro_4_main">
+                    <label for="dia_macro_4_main">試合時間帯（序盤、中盤、終盤）に応じて、チーム全体の動き（ローテーション、グループアップのタイミングなど）を最適化できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_macro_4_sub1"><label for="dia_macro_4_sub1">レーン戦が終わるタイミング、バロンが出現するタイミングなど、試合のフェーズが変わる節目を認識できたか？</label></li>
+                    <li><input type="checkbox" id="dia_macro_4_sub2"><label for="dia_macro_4_sub2">その節目で、チームとしてどのように動くべきか（ミッド集合、サイド管理、視界確保など）を判断できたか？</label></li>
+                    <li><input type="checkbox" id="dia_macro_4_sub3"><label for="dia_macro_4_sub3">適切な指示や連携を通じて、チーム全体の動きを最適化しようと試みたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>メンタル/コミュニケーション:</h3>
+        <ul>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_mental_1_main">
+                    <label for="dia_mental_1_main">チーム全体に対して、常に冷静かつ的確な状況報告、指示、コールを提供できたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_mental_1_sub1"><label for="dia_mental_1_sub1">感情に左右されず、客観的な事実（敵の位置、CD、タイマー）を報告できたか？</label></li>
+                    <li><input type="checkbox" id="dia_mental_1_sub2"><label for="dia_mental_1_sub2">明確な行動提案（「バロン開始」「タワーダイブ準備」など）を行えたか？</label></li>
+                    <li><input type="checkbox" id="dia_mental_1_sub3"><label for="dia_mental_1_sub3">適切なタイミングで、簡潔なチャットやピンでチームに伝え続けられたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_mental_2_main">
+                    <label for="dia_mental_2_main">高い集中力を維持し、試合を通してミスを最小限に抑えることができたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_mental_2_sub1"><label for="dia_mental_2_sub1">長時間や不利な状況でも集中力を切らさなかったか？</label></li>
+                    <li><input type="checkbox" id="dia_mental_2_sub2"><label for="dia_mental_2_sub2">CSの取りこぼし、無駄な被弾、判断ミスといった細かなミスを極力減らせたか？</label></li>
+                    <li><input type="checkbox" id="dia_mental_2_sub3"><label for="dia_mental_2_sub3">試合を通して安定したパフォーマンスを維持できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_mental_3_main">
+                    <label for="dia_mental_3_main">効率的（簡潔かつ明確）なピンとチャットで、チームとの連携を図れたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_mental_3_sub1"><label for="dia_mental_3_sub1">長文や意味のない連打ではなく、必要な情報を短い単語や的確なピンで伝えられたか？</label></li>
+                    <li><input type="checkbox" id="dia_mental_3_sub2"><label for="dia_mental_3_sub2">素早く情報を共有し、スムーズなチーム連携に貢献できたか？</label></li>
+                </ul>
+            </li>
+            <li>
+                <div class="main-item">
+                    <input type="checkbox" id="dia_mental_4_main">
+                    <label for="dia_mental_4_main">試合後に、自分のプレイだけでなくチーム全体の動きも含めて客観的に分析し、改善点を見つけられたか？</label>
+                </div>
+                <ul>
+                    <li><input type="checkbox" id="dia_mental_4_sub1"><label for="dia_mental_4_sub1">リプレイを見返すなどして、客観的に試合を振り返ったか？</label></li>
+                    <li><input type="checkbox" id="dia_mental_4_sub2"><label for="dia_mental_4_sub2">自分のミクロ・マクロのミスだけでなく、チーム全体の動き（ローテーション、オブジェクト管理、集団戦判断）も分析できたか？</label></li>
+                    <li><input type="checkbox" id="dia_mental_4_sub3"><label for="dia_mental_4_sub3">より大局的な視点から、次に活かせる具体的な改善点（チームコール、戦略判断など）を見つけ出せたか？</label></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div> <!-- /container -->
+
+</body>
+</html>
